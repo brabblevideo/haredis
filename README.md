@@ -15,7 +15,7 @@ this config will fail because it goes into this else if block:
 
   and sets  the defaults to `127.0.0.1:6379` - congrats on that! Yo!
   
-  as a result bunch of errors :
+  as a result we get a bunch of errors :
   
 ```
 [19:09:19](haredis#1) warning: Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED
@@ -40,7 +40,7 @@ and not worky worky...
   and add the 
  `this.auth_pass = spec.auth_pass;`
  
- in the `lib/Node.js lines 11 or 12` should be something like:
+ to the `lib/Node.js lines 11 or 12` and it should be something like:
  
 ```
  function Node(spec, options) {
